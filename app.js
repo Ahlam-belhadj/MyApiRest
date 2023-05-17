@@ -153,7 +153,7 @@ app.put('/users/:id', (req, res) => {
   const updateUser = { name, password, role , email}; 
   console.log(userId);
 
-  db.query( 'UPDATE users SET ? WHERE ID + ?', 
+  db.query( 'UPDATE users SET ? WHERE id = ?', 
   [updateUser, userId], 
   (error, result) => {
     if (error ) {
